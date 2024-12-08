@@ -23,12 +23,22 @@ def main():
     print("Cada número debe tener al menos 3 cifras y ser positivo.")
     return
 
-  # Calculamos el MCD de la lista de números
+ # Calculamos el MCD de la lista de números (método de descomposición factorial)
   mcd = maxime_comun_divisor(numbers)
   mcm = minimun_comun_multiple_list(numbers)
 
-  print("El maximo comun divisor es: ", mcd)
-  print("El minimo comun multiplo es: ", mcm)
+  # Calculamos el MCD Y MCM de la lista de números (método de euclides)
+  mcd_df = maxime_comun_divisor_df(numbers)
+  mcm_df = minimun_comun_multiple_df(numbers)
+
+  print("El maximo comun divisor es (descomposición factorial): ",
+        mcd)
+  print("El minimo comun multiplo es (descomposición factorial): ",
+        mcm)
+
+  # Imprimimos el resultado del algoritmo de Euclides
+  print("El maximo comun divisor es (método de euclides)", mcd_df)
+  print("El minimo comun multiplo es (método de euclides)", mcm_df)
 
 
 if __name__ == "__main__":
